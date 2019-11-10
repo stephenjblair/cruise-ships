@@ -8,11 +8,11 @@ describe('ship', () => {
         const ship = new Ship('Dover');
         expect(ship.startingPort).toBe('Dover');
     });
-    it('can set sail to another port', () => {
+    it('can set sail', () => {
         const ship = new Ship('Dover');
         
-        ship.setSail('Calais');
+        ship.setSail();
 
-        expect(ship.newPort).toBe('Calais');
+        expect(ship.startingPort).toBeFalsy();
     });
 }); 
